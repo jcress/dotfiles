@@ -31,8 +31,9 @@ let mapleader = ","
 set number
 
 "show whitespace
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"au InsertLeave * match ExtraWhitespace /\s\+$/
+set list listchars=trail:-
 
 "colors
 set t_Co=256
