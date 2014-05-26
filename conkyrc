@@ -32,16 +32,27 @@ xftfont Play:size=8
 xftalpha 0.9
 uppercase no
 default_color 333333
-color0 5c96a4
+color0 D63030
+#color0 5c96a4
 color1 efefef
+#color2 D63030
 color2 1994D1
 
 # Lua Load  ##${voffset 750}
-lua_load ~/.conky/spock_rings.lua
+lua_load ~/.dotfiles/spock_rings.lua
 #lua_draw_hook_pre ring_stats
 lua_draw_hook_pre conky_main
 
 TEXT
+#Alt+F2$alignr Run Dialog
+#Alt+F3$alignr Alt Menu
+#Super+space$alignr Main Menu
+#Super+t$alignr Terminal
+#Super+f$alignr File Manager
+#Super+e$alignr Editor
+#Super+w$alignr Web Browser
+#Super+v$alignr Volume Control
+
 ${font Play:normal:size=8}${voffset 16}${color1}${goto 106}${freq_g cpu0} Ghz${alignr 330}${acpitemp} °C
 ${font Play:normal:size=8}${voffset 0}${goto 120}${color1}CPU 0${alignr 330}${color1}${cpu cpu0}%
 ${font Play:normal:size=8}${voffset 2}${goto 120}${color1}CPU 1${alignr 330}${color1}${cpu cpu1}%
@@ -85,4 +96,5 @@ ${font Michroma:size=18}${goto 108}${color1}${voffset -4}${time %H}:${time %M}
 ${font Michroma:size=8}${color0}${goto 296}${voffset 20}BATTERY
 ${font Play:size=8}${color0}${goto 278}${voffset 8}${color1}${battery_percent BAT1}%${endif}${endif}
 #${font Play:normal:size=8}${goto 180}Uptime${color1}${alignr 100}${uptime_short}
-${font Michroma:bold:size=11}${color0}${voffset 70}${alignr 100}${pre_exec cat /etc/issue.net}   ${machine}
+${font Michroma:bold:size=11}${color2}${voffset 70}${alignr 100}${pre_exec cat /etc/issue.net}   ${machine}
+
