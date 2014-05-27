@@ -119,7 +119,7 @@ QUOTESED        = sed -e 's/[\\"]/\\&/g' -e 's/\\"/"/' -e 's/\\";$$/";/'
 NL		= "\\012"
 
 ### Top directory for everything
-prefix		= $/HOME/opt/vim
+prefix		= /home/jcress/opt/vim
 
 ### Top directory for the binary
 exec_prefix	= ${prefix}
