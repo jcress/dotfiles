@@ -96,6 +96,11 @@ vnoremap > >gv
 vmap Q qq
 nmap Q gqap
 
+"tab navigation
+nnoremap tk :tabprevious<CR>
+nnoremap tj :tabnext<CR>
+nnoremap tt :tabnew<CR>
+map tx :tabclose<CR>
 
 """
 "Pathogen
