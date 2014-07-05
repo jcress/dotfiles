@@ -32,7 +32,7 @@ hsetroot -fill ~/dotfiles/hadrian_wallpaper.jpg
 ## 3. sleep - give compositor time to start
 ## 4. tint2 panel
 (\
-nitrogen --restore && \
+#nitrogen --restore && \
 cb-compositor --start && \
 sleep 2s && \
 tint2 \
@@ -51,9 +51,12 @@ xfce4-power-manager &
 thunar --daemon &
 
 ## Detect and configure touchpad. See 'man synclient' for more info.
+# TapButton1=0 turns off single finger tap
+# TabButton2=3 turns on two fingers for right click
 if egrep -iq 'touchpad' /proc/bus/input/devices; then
     synclient VertEdgeScroll=1 &
     synclient TapButton1=0 &
+    synclient TapButton2=3 &
 fi
 
 ## Start xscreensaver
