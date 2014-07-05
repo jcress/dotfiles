@@ -1,5 +1,7 @@
-#/bin/bash
-# uncomment src repos in sources.list then do 
+#!/bin/bash
+# dotfiles deployment for crunchbang
+# after git cloning the repo to ~/dotfiles
+# uncomment src repos in sources.list then do
 
 sudo apt-get update
 sudo apt-get install mercurial
@@ -11,10 +13,12 @@ ln -s ~/dotfiles/vimrc .vimrc
 ln -s ~/dotfiles/vim .vim
 
 #conky
+cd ~
 mv .conkyrc .conkyrc.old
 ln -s ~/dotfiles/conkyrc .conkyrc
 killall -SIGUSR1 conky
 
+#autostart
 cd ~/.config/openbox/
 mv autostart autostart.old
 ln -s ~/dotfiles/autostart autostart
