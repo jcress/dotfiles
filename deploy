@@ -22,3 +22,9 @@ killall -SIGUSR1 conky
 cd ~/.config/openbox/
 mv autostart autostart.old
 ln -s ~/dotfiles/autostart autostart
+
+# rc.xml
+cd ~/.config/openbox/
+mv rc.xml rc.xml.old
+ln -s ~/dotfiles/rc.xml rc.xml
+openbox --reconfigure
