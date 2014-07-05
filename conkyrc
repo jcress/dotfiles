@@ -39,7 +39,7 @@ color1 efefef
 color2 1994D1
 
 # Lua Load  ##${voffset 750}
-lua_load ~/.dotfiles/spock_rings.lua
+lua_load ~/dotfiles/spock_rings.lua
 #lua_draw_hook_pre ring_stats
 lua_draw_hook_pre conky_main
 

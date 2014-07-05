@@ -1,0 +1,15 @@
+#/bin/bash
+# uncomment src repos in sources.list then do sudo apt-get update
+
+sudo apt-get install mercurial
+
+#vim
+cd ~
+sh dotfiles/install_vim.sh
+ln -s dotfiles/vimrc .vimrc
+ln -s dotfiles/vim .vim
+
+#conky
+mv .conkyrc .conkyrc.old
+ln -s dotfiles/conkyrc .conkyrc
+killall -SIGUSR1 conky
