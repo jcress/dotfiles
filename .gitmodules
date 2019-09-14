@@ -1,0 +1,3 @@
+[submodule "EverVim"]
+	path = EverVim
+	url = https://github.com/LER0ever/EverVim.git
